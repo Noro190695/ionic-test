@@ -1,0 +1,38 @@
+<div class="ion-page" #page>
+  <ion-modal
+    #modal
+    trigger="open-modal"
+    [canDismiss]="canDismiss"
+    [presentingElement]="page"
+  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Модальное окно 1</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>Test</p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</div>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="/" id="open-modal" expand="block">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Открыть модальное окно</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="pages">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Pages</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="pages">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
